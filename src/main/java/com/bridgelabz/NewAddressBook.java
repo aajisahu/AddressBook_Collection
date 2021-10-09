@@ -4,44 +4,69 @@ package com.bridgelabz;
 import java.util.Scanner;
 
 public class NewAddressBook {
-    Scanner sc = new Scanner(System.in);
+	Scanner sc = new Scanner(System.in);
 
-    public void addContact() {
-        ContactDetails person = new ContactDetails();
-        System.out.println("Enter First Name: ");
-        String firstName = sc.nextLine();
-        
-        System.out.println("Enter last Name: ");
-        String lastName = sc.nextLine();
-        
-        System.out.println("Enter your addressCity: ");
-        String addressCity = sc.nextLine();
-        
-        System.out.println("Enter your state: ");
-        String state = sc.nextLine();
-        
-        System.out.println("Enter zip code : ");
-        Long zip = sc.nextLong();
-        sc.nextLine();
-        
-        System.out.println("Enter phone number: ");
-        Long phoneNumber = sc.nextLong();
-        sc.nextLine();
-        
-        System.out.println("Enter your EMail ID: ");
-        String email = sc.nextLine();
+	public ContactDetails  addContact() {
+		ContactDetails person = new ContactDetails();
 
-        /*
-         * Setting all the user inputed values into the set method 
-         */
-        
-        person.setFirstName(firstName);
-        person.setLastName(lastName);
-        person.setAddressCity(addressCity);
-        person.setState(state);
-        person.setZip(zip.intValue());
-        person.setPhoneNumber(phoneNumber.intValue());
-        person.setEmail(email);
-        System.out.println("The Contact Details of "  +"\n" + person);
-    }
+		System.out.println("Enter First Name: ");
+		String firstName = sc.nextLine();
+
+		System.out.println("Enter last Name: ");
+		String lastName = sc.nextLine();
+
+		System.out.println("Enter your addressCity: ");
+		String addressCity = sc.nextLine();
+
+		System.out.println("Enter your state: ");
+		String state = sc.nextLine();
+
+		System.out.println("Enter zip code : ");
+		Long zip = sc.nextLong();
+		sc.nextLine();
+
+		System.out.println("Enter phone number: ");
+		Long phoneNumber = sc.nextLong();
+		sc.nextLine();
+
+		System.out.println("Enter your EMail ID: ");
+		String email = sc.nextLine();
+
+		/*
+		 * Setting all the user inputed values into the set method 
+		 */
+
+		person.setFirstName(firstName);
+		person.setLastName(lastName);
+		person.setAddressCity(addressCity);
+		person.setState(state);
+		person.setZip(zip.intValue());
+		person.setPhoneNumber(phoneNumber.intValue());
+		person.setEmail(email);
+		System.out.println("The Contact Details of "  +"\n" + person);
+
+		return person;
+
+	}
+
+	public void editContact() {
+
+
+
+		System.out.println("Enter the First Name of person");
+		String editName = sc.nextLine();
+		if (editName.equals(addContact().getFirstName())) 
+		{
+			addContact();
+			 
+		}
+		else 
+		{
+			
+		}	
+		
+	}
+
+
+
 }
