@@ -1,20 +1,26 @@
 package com.bridgelabz;
 import java.util.Scanner;
+
 public class AddressBookMain {
-	
     public static void main(String[] args) {
-        System.out.println("Welcome into the Program of Address Book System !!");
-        NewAddressBook person = new NewAddressBook();
         Scanner sc=new Scanner(System.in);
-        person.addContact();
-    
-        System.out.println("Enter Y To Edit The Contact");
-        String op = sc.nextLine();
-        
-        if(op.equals("y") || op.equals("Y") ) {
-            person.editContact(); //Calling The Edit Contact Method
-            System.exit(0);
+        System.out.println("Welcome into the Program of Address Book System !!");
+        NewAddressBook book = new NewAddressBook();
+        book.addContact();//Calling Add Contacts Method
+        System.out.println(book.person);
+        System.out.println("Enter the choice \n 1. Edit \n 2. Delete");
+        int option = sc.nextInt();
+        switch (option) {
+            case 1:
+                book.editContact();
+                System.out.println("You have Entered following data");
+                System.out.println(book.person);
+                System.out.println("Thank you for Using the Address book");
+                break;
+            case 2:
+                book.deleteContact();
+                System.out.println("Address Book details :" +book.person);
+                break;
         }
-    
     }
 }
