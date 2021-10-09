@@ -8,7 +8,7 @@ public class AddressBookMain {
         newContact.setLastName("Sahu\n");
         newContact.setAddressCity("Bolangir\n");
         newContact.setState("Odisha\n");
-        newContact.setEmail("@gmail.com\n");
+        newContact.setEmail("aaa@gmail.com\n");
         newContact.setZip(767001);
         newContact.setPhoneNumber( 9437390435L);
         System.out.println("The Contact is :\n" +newContact);
