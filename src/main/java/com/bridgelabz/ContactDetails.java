@@ -1,83 +1,89 @@
 package com.bridgelabz;
 
-	public class ContactDetails {
-	    private String firstName;
-	    private String lastName;
-	    private String addressCity;
-	    private String state;
-	    private String email;
-	    private Long zip;
-	    private Long phoneNumber;
 
-	    public ContactDetails(String firstName, String lastName, String addressCity, String state, String email, Long zip, Long phoneNumber) {
-	        super();
-	        this.firstName = firstName;
-	        this.lastName = lastName;
-	        this.addressCity = addressCity;
-	        this.state = state;
-	        this.email = email;
-	        this.zip = zip;
-	        this.phoneNumber = phoneNumber;
-	    }
+public class ContactDetails {
+    private String firstName;
+    private String lastName;
+    private String addressCity;
+    private String state;
+    private String email;
+    private String zip;
+    private String phoneNumber;
 
-	    public ContactDetails(String firstName, String lastName, String address, String state, String zipcode, String phoneNumber, String email, String cityForMap) {
-	    }
+    ContactDetails(String name, String firstName, String lastName, String addressCity, String state, String email, String zip, String phoneNumber) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.addressCity = addressCity;
+        this.state = state;
+        this.email = email;
+        this.zip = zip;
+        this.phoneNumber = phoneNumber;
+    }
 
-	    public String getFirstName() {
-	        return firstName;
-	    }
+    public String getFirstName() {
 
-	    public void setFirstName(String firstName) {
-	        this.firstName = firstName;
-	    }
+        return firstName;
+    }
 
-	    public String getLastName() {
-	        return lastName;
-	    }
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-	    public void setLastName(String lastName) {
-	        this.lastName = lastName;
-	    }
+    public String getLastName() {
 
-	    public String getAddressCity() {
-	        return addressCity;
-	    }
+        return lastName;
+    }
 
-	    public void setAddressCity(String addressCity) {
-	        this.addressCity = addressCity;
-	    }
+    public void setLastName(String lastName) {
 
-	    public String getState() {
-	        return state;
-	    }
+        this.lastName = lastName;
+    }
 
-	    public void setState(String state) {
-	        this.state = state;
-	    }
+    public String getAddressCity() {
+        return addressCity;
+    }
 
-	    public String getEmail() {
-	        return email;
-	    }
+    public void setAddressCity(String addressCity) {
+        this.addressCity = addressCity;
+    }
 
-	    public void setEmail(String email) {
-	        this.email = email;
-	    }
+    public String getState() {
 
-	    public long getZip() {
-	        return zip;
-	    }
+        return state;
+    }
 
-	    public void setZip(long zip) {
-	        this.zip = zip;
-	    }
+    public void setState(String state) {
 
-	    public long getPhoneNumber() {
-	        return phoneNumber;
-	    }
+        this.state = state;
+    }
 
-	    public void setPhoneNumber(long phoneNumber) {
-	        this.phoneNumber = phoneNumber;
-	    }
+    public String getEmail() {
+
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getZip() {
+        return zip;
+    }
+
+    public void setZip(String zip) {
+
+        this.zip = zip;
+    }
+
+    public String getPhoneNumber() {
+
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+
+        this.phoneNumber = phoneNumber;
+    }
 
 	 @Override
 	public String toString() {
